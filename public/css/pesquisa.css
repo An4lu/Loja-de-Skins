@@ -1,0 +1,35 @@
+.search-box{
+    position: absolute;
+    top: 19px;
+    height: 18px;
+    width: 350px;
+    margin-left: -150px;
+    padding: 9px;
+    background: white;
+   border-radius: 40px;
+   display: flex;
+   justify-content: space-between;
+   z-index: 99999;
+
+}
+
+.search-text{
+    background: none;
+    border: 0;
+    outline: 0;
+    font-size: 13px;
+}
+
+.lupa{
+    position: absolute;
+    top: 0px;
+    height: 18px;
+    width: 25px;
+    padding: 9px;
+    background: white;
+    margin-left: 316px;
+   border-radius: 40px;
+   display: flex;
+   justify-content: space-between;
+   z-index: 99999;
+}

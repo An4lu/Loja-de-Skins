@@ -1,0 +1,10 @@
+<?php
+    include("../bd/conexao.php");
+    include("../controls/adm.php");
+    $id=$_GET['id'];
+    if(excluir_adm($conexao,$id))
+    {
+        header("Location:../views/adm_lista.php");
+        die();
+    }
+?>

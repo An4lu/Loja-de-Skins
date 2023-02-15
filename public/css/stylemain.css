@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "BeaufortforLOL-Bold";
+    background: #38383e url("../public/img/backloll.jpg") no-repeat 100% fixed;
+    background-size: cover;
+    color: #FFFFFF;
+    
+}
+
+a{
+    background-color: #0c2a35;
+    text-decoration: none;
+}
+
+a:hover{
+    background: #c4a76c;
+}
+
+#logo{
+    font-size: 1.5rem;
+
+}
+
+#header{
+    box-sizing: border-box;
+    height: 70px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:  #0c2a35;
+}
+
+#menu{
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+}
+
+#menu a{
+    display: block;
+    padding: 1rem;
+}
+
+#btn-mobile{
+    display: none;
+}
+
+@media (max-width: 600px){
+
+    #menu{
+       display: block;
+       position: absolute;
+       width: 100%;
+       top: 70px;
+       right: 0px;
+       background: #0c2a35;
+       transition: 0.6s;
+       z-index: 1000;
+       height: 0px;
+       visibility: hidden;
+       overflow-y: hidden;
+       
+    }
+    
+    #nav.active #menu{
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+        z-index: 1;
+        
+    }
+
+    #menu a{
+        padding: 1rem 0;
+        margin: 0 1rem;
+    }
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 0.5rem;
+    }
+    #omg{
+        border-top: 2px solid;
+        width: 20px;  
+    }
+    #omg::after, #omg::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: 0.3s;
+        position: relative;
+
+    }
+    #nav.active #omg {
+        border-top-color: transparent;
+      }
+      #nav.active #omg::before {
+        transform: rotate(135deg);
+      }
+      #nav.active #omg::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+}
